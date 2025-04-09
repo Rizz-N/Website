@@ -1,0 +1,269 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--secondary);
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 13rem;
+}
+:root{
+    --primary: #330101;
+    --secondary: #a80b0b;
+    --text: #ffffff;
+}
+
+.navbar{
+    background: var(--primary);
+    display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+}
+.navbar .logo{
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-between;
+    right: 17rem;
+    width: 20rem;
+    padding: 4px;
+}
+
+.nav_list a{
+    color: var(--text);
+    font-size: 1.5rem;
+
+}
+.nav_list a::after{
+    content: " ";
+    display: block;
+    border-bottom: 2px solid var(--secondary);
+    transform: scaleX(0%);
+    transition: 0.3s ease-in;
+}
+.nav_list a:hover::after{
+    transform: scaleX(75%);
+}
+.user{
+    display: flex;
+    width: 15rem;
+    justify-content: space-between;
+}
+
+.user a{
+    font-size: 1.5rem;
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 3px solid var(--secondary);
+    color: var(--text);
+    background: var(--primary);
+
+}
+.user a:hover{
+    background-color: var(--secondary);
+    border: 3px solid white;
+    color: var(--primary);
+}
+
+.kontain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    margin: 0 auto;
+    overflow: hidden;
+    /* background: red; */
+}
+.carousel{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    transition: transform 0.5s ease;
+}
+.slide{
+    /* background: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.slide img{
+    height: 360px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.product{
+    background: var(--primary);
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 1rem;
+    position: sticky;
+    top: 5rem;
+    z-index: 99999;
+}
+.sec-navbar ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sec-navbar ul li a{
+    padding: 8px;
+    color: var(--text);
+    border-radius: 10px;
+    border: 3px solid var(--text);
+}
+.sec-navbar ul li a:hover{
+    background: var(--secondary);
+}
+.active{
+    background: var(--secondary);
+}
+/* body{
+    height: 2000px;
+} */
+
+h3{
+    margin: 2rem;
+}
+.item_container ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* border: 3px solid black; */
+}
+.item_container ul li .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    width: 12rem;
+    max-width: 90%;
+    height: 12rem;
+    margin: 10px 10px;
+    border: 3px solid var(--primary);
+}
+.item_container ul li .card:hover{
+    background: var(--primary);
+    border: 3px solid var(--secondary);
+}
+
+.item_container ul li .card img{
+    margin-top: 5px;
+    border-radius: 30px;
+    width: 8rem;
+    height: 8rem;
+}
+.item_container ul li .card span{
+    font-size: 1.2rem;
+    margin-top: 8px;
+    color: var(--secondary);
+}
+
+.bottom{
+    background: var(--primary);
+    padding: 10px;
+}
+.bottom h1{
+    color: var(--text);
+}
+.bottom b{
+    color: var(--text);
+}
+.bottom p{
+    max-width: 50%;
+    color: var(--text);
+}
+.padd{
+    display: flex;
+    flex-direction: column;
+}
+.padd h3{
+    color: var(--text);
+}
+.padd a{
+    margin: 5px 20px ;
+    max-width: 30%;
+    color: var(--text);
+}
+.padd a:hover{
+    color: var(--secondary);
+}
+footer{
+    display: grid;
+    place-items: center;  
+    padding: 8px 0;
+    background: var(--secondary);
+}
+footer p{
+    font-weight: 600;
+    color: var(--text);
+}
+
+@media (max-width: 500px){
+    .navbar{
+        padding: 10px;
+    }
+    .navbar .logo{
+        font-size: 1rem;
+    }
+    .navbar .nav_list{
+        width: 13rem;
+    }
+    .navbar .nav_list a{
+        font-size: 15px;
+    }
+    .navbar .user{
+        width: 8rem;
+    }
+
+    .navbar .user a{
+        font-size: 15px;
+        padding: 3px;
+    }
+    
+    .kontain{
+        width: 100%;
+        height: 140px;
+    }
+    .slide img{
+        height: 130px;
+    }
+    .product{
+        top: 3.2rem;
+    }
+    .sec-navbar ul li a{
+        font-size: 10px;
+    }
+    .item_container ul li .card{
+        height: 8rem ;
+        width: 6rem;
+        border-radius: 10px;
+        margin: 5px 7px;
+    }
+    .item_container ul li .card img{
+        border-radius: 10px;
+        width: 4rem;
+        height: 4rem;
+    }
+    .item_container ul li .card span{
+        font-size: 1rem;
+    }
+    .bottom p{
+        max-width: 90%;
+    }
+}
