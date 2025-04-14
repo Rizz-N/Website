@@ -41,8 +41,15 @@ signUpForm.addEventListener('submit', function (e) {
   };
 
   localStorage.setItem('user', JSON.stringify(userData));
-  alert('Register successful! You can now log in.');
   container.classList.remove("right-panel-active");
+
+  const modal=
+  document.getElementById('Modal-alert');
+  modal.style.display = 'block';
+
+  setTimeout(() =>{
+    modal.style.display = 'none';
+  },2000);
 });
 
 // Login

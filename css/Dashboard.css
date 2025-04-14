@@ -11,8 +11,8 @@ html{
     scroll-padding: 13rem;
 }
 :root{
-    --primary: #330101;
-    --secondary: #a80b0b;
+    --primary: #5d0d02;
+    --secondary: #fc0000;
     --text: #ffffff;
 }
 
@@ -212,6 +212,18 @@ footer{
 footer p{
     font-weight: 600;
     color: var(--text);
+}
+
+.payment{
+    height: 40vh;
+}
+.payment h1{
+    text-align: center;
+}
+
+.payment p{
+    text-align: center;
+    margin-top: 4rem;
 }
 
 @media (max-width: 500px){
